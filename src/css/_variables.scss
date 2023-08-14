@@ -1,11 +1,23 @@
 // colors
 $white: #fff;
-$black: #2F281E;
-$dark-brown: #544837;
+$black: #000;
+$blue-light: #EAF6FC;
+$blue-medium: #CCDDFF;
+$blue-twitter: #00ACEE;
+$green-light: #F0FAF9;
+$pink: #F063B8;
+$pink-light: #FEF0F8;
+$pink-medium: #FDE8F5;
+$violet: #9C69E2;
+$violet-light: #F6F0FD;
+$violet-middle: #8A40EE;
+
+$text-gray-dark: #4B5D68;
+$text-violet-dark: #212353;
 // fonts
 $default-font-name: 'Montserrat';
-$footer-title-font: 'Gotham';
 $nav-font: 'Montserrat';
+$nav-font-size: 16px;
 $fallback: Arial, Helvetica, sans-serif;
 
 $main-font: $default-font-name, $fallback;

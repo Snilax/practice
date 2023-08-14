@@ -1,9 +1,9 @@
-@font-face {
-    font-family: $default-font-name;
-    font-style: normal;
-    font-weight: 400;
-    src: url('#{$font-path}roboto-v30-latin-regular.woff2') format('woff2');
-}
+// @font-face {
+//     font-family: $default-font-name;
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('#{$font-path}roboto-v30-latin-regular.woff2') format('woff2');
+// }
 
 body {
     font-family: $main-font;
@@ -13,7 +13,7 @@ body {
 
 .footer__title {
     color: $black ;
-    font-family: $footer-title-font;
+    // font-family: $footer-title-font;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
