@@ -1,0 +1,120 @@
+@font-face {
+    font-family: $default-font-name;
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}roboto-v30-latin-regular.woff2') format('woff2');
+}
+
+body {
+    font-family: $main-font;
+    background-color: $white;
+    font-style: normal;
+}
+
+.footer__title {
+    color: $black ;
+    font-family: $footer-title-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+nav {
+    font-family: $nav-font;
+    font-size: $main-font-size;
+    font-weight: 400;
+    line-height: 28px
+}
+
+.container {
+    padding: $container-padding;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 8.33%;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 16.66%;
+}
+
+.col-3 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+
+.col-5 {
+    display: flex;
+    flex-direction: column;
+    width: 41.66%;
+}
+
+.col-6 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.col-7 {
+    display: flex;
+    flex-direction: column;
+    width: 58.33%;
+}
+
+.col-8 {
+    display: flex;
+    flex-direction: column;
+    width: 66.66%;
+}
+
+.col-9 {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.col-10 {
+    display: flex;
+    flex-direction: column;
+    width: 83.33%;
+}
+
+.col-11 {
+    display: flex;
+    flex-direction: column;
+    width: 91.66%;
+}
+
+.col-12 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
