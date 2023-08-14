@@ -5,29 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@700&family=Work+Sans:wght@700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page">
     @@include("./_header.html")
+    <img src="./images/first-screen-img.svg" alt="">
     <main>
-        <section class="hero-block">
-
-        </section>
-        <section class="bg-block">
-
-        </section>
-        <section class="features">
-
-        </section>
-        <section class="testimonnials">
-
-        </section>
+        @@include("./hero-block/_hero-block.html")
+        @@include("./data-bank/_data-bank.html")
+        @@include("./features/_features.html")
+        @@include("./testimonials/_testimonials.html")
     </main>
 </body>
 

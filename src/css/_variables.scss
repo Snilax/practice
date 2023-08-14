@@ -12,13 +12,22 @@ $violet: #9C69E2;
 $violet-light: #F6F0FD;
 $violet-middle: #8A40EE;
 
-$text-gray-dark: #4B5D68;
-$text-violet-dark: #212353;
+$main-font-color: #4B5D68;
+$secondary-font-color: #212353;
 // fonts
 $default-font-name: 'Montserrat';
 $nav-font: 'Montserrat';
 $nav-font-size: 16px;
 $fallback: Arial, Helvetica, sans-serif;
+
+$xl-font: 80px;
+$lg-font: 40px;
+$md-font: 24px;
+$secondary-font: 18px;
+$main-page-font: 16px;
+$link-font-size: 14px;
+$copyright-font: 12px;
+
 
 $main-font: $default-font-name, $fallback;
 $font-path: './fonts/';
