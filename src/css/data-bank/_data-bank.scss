@@ -1,0 +1,28 @@
+.data-bank {
+
+    // .data-bank__wrapper
+
+    &__wrapper {}
+}
+
+.block {
+    // display: flex;
+    // max-width: 100%;
+    background-color: $pink-medium;
+
+    // .block__description-img
+
+    &__description-img {}
+
+    // .block__description
+
+    &__description {}
+
+    // .block__description-title
+
+    &__description-title {}
+
+    // .block__description-text
+
+    &__description-text {}
+}
