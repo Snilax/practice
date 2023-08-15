@@ -1,1 +1,155 @@
 // @mixin btn 
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin flexnew($_jst-cont: center, $_flex-wrap: wrap) {
+    display: flex;
+    justify-content: $_jst-cont;
+    flex-wrap: $_flex-wrap;
+}
+
+@mixin font-face($_font-name, $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name) {
+    @font-face {
+        font-family: $_font-family;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
+    }
+}
+
+@mixin test {
+    @include flex;
+
+    @content;
+}
+
+@mixin ellipsis($line: 1) {
+    @if $line==1 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @else {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box !important;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+}
+
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+}
+
+@mixin visuality-hidden {
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0) !important;
+    margin: -1px !important;
+}
+
+@mixin container {
+    .container {
+        max-width: $default-width;
+        margin: 0 auto;
+        padding: 0 $gap;
+    }
+}
+
+@mixin grid($count: 12) {
+    @include container;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 (-$gap);
+    }
+
+    [class*="col-"] {
+        padding: $gap;
+        box-sizing: border-box;
+    }
+
+    @for $i from 1 through $count {
+        $width: math.div(100%, $count) * $i;
+
+        .col-#{$i} {
+            max-width: $width;
+            width: 100%;
+            flex-basis: $width;
+        }
+    }
+
+    @each $breackpoint,
+    $breackpoint-value in $breack-points {
+        @media screen and (max-width: $breackpoint-value) {
+            @for $i from 1 through $count {
+                $width: math.div(100%, $count) * $i;
+
+                .col-#{$breackpoint}-#{$i} {
+                    max-width: $width;
+                    width: 100%;
+                    flex-basis: $width;
+                }
+
+                .offset-#{$breackpoint}-#{$i} {
+                    margin-left: $width;
+                }
+            }
+
+            .hidden-#{$breackpoint} {
+                display: none;
+            }
+        }
+    }
+}
+
+@mixin media($point: sm) {
+    @media screen and (max-width: map-get($breack-points, $point)) {
+        @content;
+    }
+}
+
+@mixin media-m($point: sm) {
+    @media screen and (min-width: (map-get($breack-points, $point) + 1)) {
+        @content;
+    }
+}
+
+
+@mixin social-item($_social-name) {
+    &[name="#{$_social-name}"]:checked~.social-list__row {
+        .social-list__item_#{$_social-name} {
+            opacity: 1;
+        }
+
+        .social-list__url-item_#{$_social-name} {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
