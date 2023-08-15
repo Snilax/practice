@@ -1,25 +1,58 @@
+$defaulp-testim-bg: $blue-medium;
+$defaulp-border-bg: $black;
+$defaulp-border-par: 1px solid $defaulp-border-bg;
+$defaulp-color-testim-title: $main-font-color;
+$defaulp-border-par-cads-wr: 1px solid $violet;
+$defaulp-bg-two: $white;
+$defaulp-link: $violet;
+
+.testimonials-bg {
+    background-image: url(../../images/bg-testimonials.svg);
+    background-repeat: no-repeat;
+    background-color: $defaulp-testim-bg;
+    border-radius: 50px;
+    border: $defaulp-border-par;
+
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%
+}
+
 .testimonials {
 
     // .testimonials__title
 
-    &__title {}
+    &__title {
+        text-align: center;
+    }
 
     // .testimonials__cards
 
-    &__cards {}
+    &__cards {
+        @include media(sm) {}
+    }
 
     // .testimonials__card
 
     &__card {}
 }
 
-.container {}
-
-.row {}
-
-.title {}
+.testimonials-title {
+    color: $defaulp-color-testim-title;
+    font-family: Work Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    padding: 80px 0;
+}
 
 .testimonials-card {
+    display: flex;
+    gap: $gap;
 
     // .testimonials-card__avatar
 
@@ -27,17 +60,51 @@
 
     // .testimonials-card__autor
 
-    &__autor {}
+    &__autor {
+        margin-bottom: 18px;
+
+    }
 
     // .testimonials-card__name
 
-    &__name {}
+    &__name {
+        color: $secondary-font-color;
+        font-weight: 500;
+        line-height: 160%;
+    }
 
     // .testimonials-card__link
 
-    &__link {}
+    &__link {
+        color: $defaulp-link;
+        font-size: $link-font-size;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: 0.14px;
+    }
 
     // .testimonials-card__text
 
-    &__text {}
+    &__text {
+        color: inherit;
+        font-weight: inherit;
+        line-height: 160%;
+    }
+
+    &__wrapper {
+        max-width: 300px;
+    }
+}
+
+.testimonials-card-wrapper {
+    border-radius: 50px;
+    border: $defaulp-border-par-cads-wr;
+    background: $defaulp-bg-two;
+    padding: 50px 30px;
+}
+
+.blog-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
 }
