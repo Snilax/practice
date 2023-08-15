@@ -1,0 +1,76 @@
+// btn-primary - кнопка зі стрілкою
+
+// це свг для стрілки (можно потім ще перевикористовувати + має вже потрібний всюду паддінг):
+// <svg class="btn-icon"><use xlink:href="#btn-arrow"></use></svg>
+
+// відкорегований код свг, котрий потрібно вставити в хтмл:
+// <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="16">
+//         <symbol id="btn-arrow" viewBox="0 0 22 16">
+//             <g id="arrow">
+//                 <path id="Polygon 1" d="M15 15L21 8L15 1" stroke-width="2" stroke-linecap="round" fill="none"
+//                     stroke-linejoin="round" />
+//                 <path id="Vector 74" d="M21 8H1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+//             </g>
+//         </symbol>
+// </svg>
+
+
+$border-height: 60px;
+$border-width: 210px;
+$btnfooter-hover-color: #EB4BAB;
+
+.btn {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: $secondary-font;
+    font-weight: 500;
+    width: $border-width;
+    height: $border-height;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &-icon {
+        width: 20px;
+        height: 14px;
+        padding-left: 20px;
+        stroke: $violet;
+    }
+
+    &-primary {
+        background-color: $white;
+        color: $secondary-font-color;
+        border: 1px solid $violet;
+
+        &:hover {
+            background-color: $violet;
+            color: $white;
+
+            >.btn-icon {
+                stroke: $white;
+            }
+        }
+    }
+
+    &-hero {
+        background-color: $violet;
+        color: $white;
+
+        &:hover {
+            background-color: $violet-middle;
+        }
+    }
+
+    &-footer {
+        background-color: $pink;
+        color: $white;
+
+        &:hover {
+            background-color: $btnfooter-hover-color;
+        }
+    }
+}
