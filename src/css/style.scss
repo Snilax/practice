@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "./reset";
 @import "./variables";
 @import "./extend";
@@ -9,3 +10,4 @@
 @import "./features/features";
 @import "./footer/footer";
 @import "./btn";
+@import "./testimonials/_testimonials"
