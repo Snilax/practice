@@ -12,6 +12,12 @@ $defaulp-link: $violet;
     background-color: $defaulp-testim-bg;
     border-radius: 50px;
     border: $defaulp-border-par;
+    padding: 80px 70px;
+
+    @include media(xs) {
+        min-width: 500px;
+        padding: 20px 10px;
+    }
 
 }
 
@@ -31,13 +37,7 @@ $defaulp-link: $violet;
 
     // .testimonials__cards
 
-    &__cards {
-        @include media(sm) {}
-    }
-
-    // .testimonials__card
-
-    &__card {}
+    &__cards {}
 }
 
 .testimonials-title {
@@ -47,12 +47,19 @@ $defaulp-link: $violet;
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
-    padding: 80px 0;
+    margin-bottom: 80px;
 }
 
 .testimonials-card {
     display: flex;
     gap: $gap;
+    margin: 0 10px;
+
+    @include media(md) {
+        align-items: center;
+    }
+
+
 
     // .testimonials-card__avatar
 
@@ -91,9 +98,8 @@ $defaulp-link: $violet;
         line-height: 160%;
     }
 
-    &__wrapper {
-        max-width: 300px;
-    }
+    //testimonials-card__wrapper
+    &__wrapper {}
 }
 
 .testimonials-card-wrapper {
@@ -105,6 +111,12 @@ $defaulp-link: $violet;
 
 .blog-cards {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 80px;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media(md) {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
 }
