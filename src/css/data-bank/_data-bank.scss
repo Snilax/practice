@@ -1,0 +1,85 @@
+/* При адаптації (для екранів сматрфону) змінила розмір шрифту, 
+міняла на око, як і всі відступи 
+(порівняно з десктопом зменщувала відступи 
+при зменшенні екранів) */
+
+.data-bank {
+
+    // .data-bank__block
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        padding: 75px 70px;
+        background-color: $pink-medium;
+        border-radius: 50px;
+        margin-bottom: 120px;
+
+        @include media(md) {
+            flex-direction: column;
+            gap: 50px;
+            padding: 25px 20px;
+            align-items: center;
+        }
+
+
+        @include media(sm) {
+            gap: 20px;
+        }
+    }
+
+    // .data-bank__block-img
+
+    &__block-img {
+        max-width: 400px;
+
+        @include media(md) {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    // .data-bank__block-description
+
+    &__block-description {
+        max-width: 500px;
+
+        // .data-bank__block-description_title
+
+        &_title {
+            color: $secondary-font-color;
+            font-family: Work Sans;
+            font-size: $lg-font;
+            line-height: 130%;
+            padding-top: 35px;
+
+            @include media(sm) {
+                font-size: $md-font;
+            }
+
+        }
+
+        // .data-bank__block-description_text
+
+        &_text {
+            color: $main-font-color;
+            font-family: $default-font-name;
+            font-size: $secondary-font;
+            font-weight: 500;
+            line-height: 160%;
+            padding-top: 40px;
+
+            @include media(sm) {
+                font-size: $link-font-size;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.block {
+    @include media(md) {
+        width: 100%;
+    }
+}
